@@ -7,8 +7,11 @@ Genes_relation.data, Bestand Genes_relation.names,
 Bestand Interactions_relation.data en Bestand Interactions_relation.names.
 De vier files zijn samengevoegd door een gemaakt script in Python.
 Dit is gedaan door eerst alle vier de files te cleanen op fouten.
-Onder deze fouten vallen elementen zoals tabs die spontaan in de file zitten,
-maar ook inconsistent gebruik van vraagtekens en unknown voor onbekende data.
+Onder deze fouten vallen elementen zoals tabs, punten, komma's, enters en speciale regeltekens die in python onder \r vallen.
+Deze fouten zitten willekeurig en inconsistent in de file.
+Verder zat er ook inconsistent gebruik van vraagtekens en unknown in voor het vermelden van onbekende data.
+Eenmaal nadat deze uit de file verwijderd waren, 
+werd er gekeken hoe de files met dezelfde naam samen gevoegt konden worden.
 
 Als laatste is er voor het schoon maken van de file de dubbelen genen
 weg gehaald. Nadat de files schoon waren van fouten zijn de losse
