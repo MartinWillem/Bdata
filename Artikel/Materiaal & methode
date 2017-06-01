@@ -1,22 +1,19 @@
 Voor dit project is er gebruik gemaakt van Python versie 3.6.1.
 Het is gebruikt om een script te schijven om de verkregen data
 om te zetten naar een format dat deze gelezen kon worden door 
-Rapidminer versie 7.5. Dit is gedaan door naar de vier tekst files.
-Deze vier files heten:
-Genes_relation.data, Bestand Genes_relation.names, 
-Bestand Interactions_relation.data en Bestand Interactions_relation.names.
+Rapidminer versie 7.5. Dit is gedaan door naar de vier tekst files samen te voegen.
+De vier files heten: Genes_relation.data, Genes_relation.names, Interactions_relation.data en Interactions_relation.names.
 De vier files zijn samengevoegd door een gemaakt script in Python.
 Dit is gedaan door eerst alle vier de files te cleanen op fouten.
 Onder deze fouten vallen elementen zoals tabs, punten, komma's, enters en speciale regeltekens die in python onder \r vallen.
 Deze fouten zitten willekeurig en inconsistent in de file.
 Verder zat er ook inconsistent gebruik van vraagtekens en unknown in voor het vermelden van onbekende data.
-Eenmaal nadat deze uit de file verwijderd waren, 
-werd er gekeken hoe de files met dezelfde naam samen gevoegt konden worden.
-
-Als laatste is er voor het schoon maken van de file de dubbelen genen
-weg gehaald. Nadat de files schoon waren van fouten zijn de losse
-regels omgezet in lijsten. Hierna zijn de twee losse files 
-omgezet naar één complete bestand.
+Eenmaal nadat deze uit de file verwijderd waren, werd er gekeken hoe de files samen gevoegt konden worden.
+Dit werdt eerst gedaan de files met dezelfde naam zoals Genes_relation.data met Genes_relation.names. Nadat deze waren samengevoegd,
+kon er gekeken worden hoe de files met verschillende namen samengevoegt konden worden. 
+Dit zal gedaan worden door de relatie's in de relatie file als attributen maken in de interactie file.
+Hierdoor is er één file ontstaan met meer columnen dan rijen. Waarvan ook veel elementen false zijn.
+In deze extra columnen is te zien of een attribuut wel of geen relatie heeft met een andere als deze boven de 0.6 correlatie heeft.
 
 Dit bestand is hierna ingelezen in Rapidminer. Dit programma is
 gebruikt vanwege zijn overzichtelijke manier van verbanden in kaart 
