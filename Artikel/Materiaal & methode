@@ -1,0 +1,16 @@
+Voor dit project is er gebruik gemaakt van Python versie 3.6.1.
+Het is gebruikt om een script te schijven om de verkregen data
+om te zetten naar een format dat deze gelezen kon worden door 
+Rapidminer versie 7.5. Dit is gedaan door naar de twee file die
+verkregen waren proberen samen te voegen. Dit is gedaan om eerst
+de foute data in beide files te verwijderen. Hieronder valt “tabs”
+die spontaan in de file zitten, maar ook inconsistent gebruik 
+van vraagtekens en unknown gebruiken voor onbekende data. 
+Als laatste is er voor het schoon maken van de file de dubbelen genen
+weg gehaald. Nadat de files schoon waren van fouten zijn de losse
+regels omgezet in lijsten. Hierna zijn de twee losse files 
+omgezet naar één complete bestand.
+
+Dit bestand is hierna ingelezen in Rapidminer versie 7.5.
+Dit programma is gebruikt vanwege zijn overzichtelijke manier 
+van verbanden in kaart brengen en relaties zoeken in de data.
