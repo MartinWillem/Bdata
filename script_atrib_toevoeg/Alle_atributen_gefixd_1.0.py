@@ -4,34 +4,31 @@ def functie_1(super_lijst,header):
     super_file = open("uber_file","w")
     super_file.write(header)
     file1 = open("Genes_relation.data.txt","r")
-    regels = file1.readlines()
+    alle_regels = file1.readlines()
     file1.close()
 
-
-    eerste_gen = regels[0]
-    print eerste_gen
+    eerste_gen = alle_regels[0]
     PATTERN = re.compile(r'''((?:[^,"']|"[^"]*"|'[^']*')+)''')
     eerste_gen = PATTERN.split(eerste_gen)[1::2]
     lijst_van_al = [[],[],[],[],[],[],[],[],[]]
-    for x in regels:
-        a = PATTERN.split(x)[1::2]
-        if eerste_gen[0] != x.split(",")[0]:
+    for regel in alle_regels:
+        gesplitte_regel = PATTERN.split(regel)[1::2]
+        if eerste_gen[0] != regel.split(",")[0]:
             toevoeg_string = eerste_gen[0]
-            for G in range(1, 9):
-                for T in  super_lijst[G]:
-                    if T in lijst_van_al[G]:
+            for lijst_nummer in range(1, 9):
+                for sl_woord in  super_lijst[lijst_nummer]:
+                    if sl_woord in lijst_van_al[lijst_nummer]:
                         toevoeg_string += ",True"
-                    elif lijst_van_al[G][0] == "?":
-                 #       print lijst_van_al[G][0]
+                    elif lijst_van_al[lijst_nummer][0] == "?":
                         toevoeg_string += ",?"
                     else:
                         toevoeg_string += ",False"
             toevoeg_string += "\n"
             super_file.write(toevoeg_string)
-            eerste_gen = a
+            eerste_gen = gesplitte_regel
             lijst_van_al = [[],[], [], [], [], [], [], [], []]
         for i in range(0, 9):
-            lijst_van_al[i].append(a[i].rstrip('.\r\n'))
+            lijst_van_al[i].append(gesplitte_regel[i].rstrip('.\r\n').rstrip('\r\n'))
             lijst_van_al[i] = list(set(lijst_van_al[i]))
     super_file.close()
 
@@ -61,7 +58,8 @@ def leuke_header_maken(super_lijst) :
     for i in range(len(super_lijst)):
         for x in super_lijst[i]:
             string_header +=  x+","
-    string_header.rstrip(",")
+    print repr(string_header)
+    string_header = string_header.rstrip(",")
     string_header += "\n"
     return string_header
 
