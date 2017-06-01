@@ -28,7 +28,7 @@ def functie_1(super_lijst,header):
             eerste_gen = gesplitte_regel
             lijst_van_al = [[],[], [], [], [], [], [], [], []]
         for i in range(0, 9):
-            lijst_van_al[i].append(gesplitte_regel[i].rstrip('.\r\n').rstrip('\r\n'))
+            lijst_van_al[i].append(maakschoon(a[i]))
             lijst_van_al[i] = list(set(lijst_van_al[i]))
     super_file.close()
 
@@ -64,7 +64,11 @@ def leuke_header_maken(super_lijst) :
     return string_header
 
 
-
+def maakschoon(niet_schoon):
+    niet_schoon = re.sub(",", "", niet_schoon)
+    niet_schoon = re.sub(r'(?:_[A-z])?\.([^.]*)$', "", niet_schoon)
+    niet_schoon = re.sub('"', "", niet_schoon)
+    return niet_schoon
 
 
 def main():
