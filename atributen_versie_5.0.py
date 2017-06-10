@@ -13,7 +13,6 @@ def functie_1(super_lijst,header):
     for regel in alle_regels:
         gesplitte_regel = PATTERN.split(regel)[1::2]
         if eerste_gen[0] != regel.split(",")[0]:
-            print lijst_van_al
             toevoeg_string = eerste_gen[0]
             for lijst_nummer in range(1, 9):
                 for sl_woord in  super_lijst[lijst_nummer]:
@@ -62,12 +61,36 @@ def header1():
             super_lijst.append(lijst_klein)
     return(super_lijst)
 
+def header2():
+    with open('Genes_relation.data.txt', 'rw') as file:
+        genlijst = []
+        for line in file:
+            genlijst.append(line.split(",")[0])
+        genlijst = set(genlijst)
+        return genlijst
+
+def interacties():
+    dict = {}
+    with open('Interactions_relation.data.txt', 'rw') as file:
+        filelines = file.readlines()
+        print filelines
+        for i in filelines:
+            try:
+                dict[i.rstrip(".\r\n").split(",")[0]] += [i.rstrip(".\r\n").split(",")[1:4]]
+            except KeyError:
+                dict[i.rstrip(".\r\n").split(",")[0]] = [i.rstrip(".\r\n").split(",")[1:4]]
+    print dict
+
+
 def leuke_header_maken(super_lijst) :
     string_header = ""
+    string_header2 = ""
     for i in range(len(super_lijst)):
         for x in super_lijst[i]:
             string_header +=  x+","
-    print repr(string_header)
+    for x in header2():
+        string_header2 += "Interactie met: " + x + "," + x + "correlatie coefficient" + ","
+    string_header = string_header + string_header2
     string_header = string_header.rstrip(",")
     string_header += "\n"
     return string_header
@@ -76,11 +99,12 @@ def leuke_header_maken(super_lijst) :
 def maakschoon(niet_schoon):
     niet_schoon = re.sub(",", "", niet_schoon)
     niet_schoon = re.sub(r'(?:_[A-z])?\.([^.]*)$', "", niet_schoon)
-    niet_schoon = re.sub('"', "", niet_schoon)
-    return niet_schoon
+    schoon = re.sub('"', "", niet_schoon)
+    return schoon
 
 
 def main():
+    interacties()
     super_lijst = header1()
     header =leuke_header_maken(super_lijst)
     functie_1(super_lijst,header)
