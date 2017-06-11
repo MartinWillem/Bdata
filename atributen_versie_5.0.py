@@ -6,6 +6,7 @@ def functie_1(super_lijst,header):
     file1 = open("Genes_relation.data.txt","r")
     alle_regels = file1.readlines()
     file1.close()
+    dict = interacties()
     eerste_gen = alle_regels[0]
     PATTERN = re.compile(r'''((?:[^,"']|"[^"]*"|'[^']*')+)''')
     eerste_gen = PATTERN.split(eerste_gen)[1::2]
@@ -29,8 +30,21 @@ def functie_1(super_lijst,header):
                         toevoeg_string += ",?"
                     else:
                         toevoeg_string += ",False"
-
-
+            for genid in lijst_van_al[0]:
+                try:
+                    print dict[genid]
+                    for id in header2():
+                        print id
+                        for matchedmet in dict[genid]:
+                            print matchedmet[0]
+                            print matchedmet[2]
+                            if id == matchedmet[0]:
+                                toevoeg_string += ",True" + "," + str(matchedmet[2])
+                            else:
+                                toevoeg_string += ",False" + ",0"
+                except KeyError:
+                    for id in header2():
+                        toevoeg_string += ",False" + ",0"
             toevoeg_string += "\n"
             super_file.write(toevoeg_string)
             eerste_gen = gesplitte_regel
@@ -73,14 +87,13 @@ def interacties():
     dict = {}
     with open('Interactions_relation.data.txt', 'rw') as file:
         filelines = file.readlines()
-        print filelines
+        tellijst = []
         for i in filelines:
             try:
                 dict[i.rstrip(".\r\n").split(",")[0]] += [i.rstrip(".\r\n").split(",")[1:4]]
             except KeyError:
                 dict[i.rstrip(".\r\n").split(",")[0]] = [i.rstrip(".\r\n").split(",")[1:4]]
-    print dict
-
+        return dict
 
 def leuke_header_maken(super_lijst) :
     string_header = ""
