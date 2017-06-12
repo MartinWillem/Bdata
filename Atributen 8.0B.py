@@ -22,7 +22,7 @@ def super_lijst_maken():
 def leuke_header_maken(super_lijst) :
     string_header = ""
     string_header2 = ""
-    for i in range(len(super_lijst)):
+    for i in range(len(super_lijst)-1):
         for x in super_lijst[i]:
             string_header +=  x+","
     for x in header2():
@@ -64,11 +64,12 @@ def functie_1(super_lijst,header):
     PATTERN = re.compile(r'''((?:[^,"']|"[^"]*"|'[^']*')+)''')
     eerste_gen = PATTERN.split(eerste_gen.rstrip(".\r\n"))[1::2]
     lijst_van_al = [[],[],[],[],[],[],[],[],[]]
+    alle_regels.append(12 * " ,")
     for regel in alle_regels:
         gesplitte_regel = PATTERN.split(regel.rstrip(".\r\n"))[1::2]
         if eerste_gen[0] != regel.split(",")[0]:
             toevoeg_string = eerste_gen[0]
-            for lijst_nummer in range(1, 9):
+            for lijst_nummer in range(1, 8):
                 for sl_woord in  super_lijst[lijst_nummer]:
                     for kaas in lijst_van_al[lijst_nummer]:
                         ja = False
@@ -84,6 +85,7 @@ def functie_1(super_lijst,header):
                         toevoeg_string += ",False"
                     else:
                         toevoeg_string += ",?"
+            toevoeg_string += ","+lijst_van_al[-1][0]
             for genid in lijst_van_al[0]:
                 try:
                     print dict[genid]
