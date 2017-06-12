@@ -5,7 +5,7 @@ import re
 
 
 def super_lijst_maken():
-    file1 = open("Genes_relation.data.txt", "r")
+    file1 = open("k-nn_genes_relation.csv", "r")
     alle_regels = file1.readlines()
     file1.close()
     PATTERN = re.compile(r'''((?:[^,"']|"[^"]*"|'[^']*')+)''')
@@ -24,7 +24,7 @@ def leuke_header_maken(super_lijst) :
     string_header2 = ""
     for i in range(len(super_lijst)-1):
         for x in super_lijst[i]:
-            string_header +=  x+","
+            string_header += "\'" +x+"\'"+","
     string_header += "locatie,"
     #for x in header2():
     #    string_header2 += "Interactie met: " + x + "," + x + " correlatie coefficient" + ","
@@ -55,7 +55,7 @@ def interacties():
 
 
 def functie_1(super_lijst,header):
-    file1 = open("Genes_relation.data.txt","r")
+    file1 = open("k-nn_genes_relation.csv","r")
     alle_regels = file1.readlines()
     file1.close()
     dict = interacties()
