@@ -25,8 +25,9 @@ def leuke_header_maken(super_lijst) :
     for i in range(len(super_lijst)-1):
         for x in super_lijst[i]:
             string_header +=  x+","
+    string_header += "locatie,"
     for x in header2():
-        string_header2 += "Interactie met: " + x + "," + x + "correlatie coefficient" + ","
+        string_header2 += "Interactie met: " + x + "," + x + " correlatie coefficient" + ","
     string_header = string_header + string_header2
     string_header = string_header.rstrip(",")
     string_header += "\n"
@@ -88,12 +89,8 @@ def functie_1(super_lijst,header):
             toevoeg_string += ","+lijst_van_al[-1][0]
             for genid in lijst_van_al[0]:
                 try:
-                    print dict[genid]
                     for id in header2():
-                        print id
                         for matchedmet in dict[genid]:
-                            print matchedmet[0]
-                            print matchedmet[2]
                             if id == matchedmet[0]:
                                 toevoeg_string += ",True" + "," + str(matchedmet[2])
                             else:
