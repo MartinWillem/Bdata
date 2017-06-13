@@ -24,7 +24,7 @@ def leuke_header_maken(super_lijst) :
     string_header2 = ""
     for i in range(len(super_lijst)-1):
         for x in super_lijst[i]:
-            string_header += "\'" +x+"\'"+","
+            string_header += x+","
     string_header += "locatie,"
     #for x in header2():
     #    string_header2 += "Interactie met: " + x + "," + x + " correlatie coefficient" + ","
