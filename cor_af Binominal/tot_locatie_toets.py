@@ -33,7 +33,7 @@ def leuke_header_maken(super_lijst) :
     string_header = ""
     for i in range(len(super_lijst)-1):
         for x in super_lijst[i]:
-            string_header += "\'" +x+"\'"+","
+            string_header += x+","
     string_header += "locatie,"
     string_header = string_header# + string_header2
     string_header = string_header.rstrip(",")
