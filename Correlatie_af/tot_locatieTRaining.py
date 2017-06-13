@@ -34,32 +34,11 @@ def leuke_header_maken(super_lijst) :
     return string_header
 
 
-def header2():
-    with open('Genes_relation.data.txt', 'rw') as file:
-        genlijst = []
-        for line in file:
-            genlijst.append(line.split(",")[0])
-        genlijst = set(genlijst)
-        return genlijst
-def interacties():
-    dict = {}
-    with open('Interactions_relation.data.txt', 'rw') as file, open('Interactions_relation.names.inverted.txt', 'rw') as file2:
-        filelijst =[file.readlines(), file2.readlines()]
-        for x in filelijst:
-            for i in x:
-                try:
-                    dict[i.rstrip(".\r\n").split(",")[0]] += [i.rstrip(".\r\n").split(",")[1:4]]
-                except KeyError:
-                    dict[i.rstrip(".\r\n").split(",")[0]] = [i.rstrip(".\r\n").split(",")[1:4]]
-        return dict
-
-
 def functie_1(super_lijst,header):
     file1 = open("k-nn_genes_relation.csv","r")
     alle_regels = file1.readlines()
     file1.close()
-    dict = interacties()
-    super_file = open("uber_file_totlocatie.csv","w")
+    super_file = open("uber_file_totlocatieTRAINING.csv","w")
     super_file.write(header)
     eerste_gen = alle_regels[0]
     PATTERN = re.compile(r'''((?:[^,"']|"[^"]*"|'[^']*')+)''')
@@ -100,7 +79,6 @@ def functie_1(super_lijst,header):
 
 
 def main():
-    os.system("""cat Interactions_relation.data.txt | awk -F ',' '{print $2, "," $1, ",",  $3, ",", $4}' | tr -d ' ' >  Interactions_relation.names.inverted.txt""")
     super_lijst = super_lijst_maken()
     header = leuke_header_maken(super_lijst)
     functie_1(super_lijst,header)
