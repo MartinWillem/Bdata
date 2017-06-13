@@ -5,7 +5,7 @@ Verder wordt elke atribuut die toegevoegd wordt in 'kleine header' opgeslagen.
 beide worden gereturned.
 '''
 def maak_een_nieuwe_header(super_dict):
-    file1 = open("uber_file_totlocatie.csv","r")
+    file1 = open("uber_file_totlocatieTRAINING.csv","r")
     alle_regeltjes = file1.readlines()
     file1.close()
     header = alle_regeltjes[0]
@@ -42,22 +42,24 @@ Dit wordt opgevangen in de try except -> UB_regel+= ",False,0"
 Op het einde wordt de regel weggeschreven naar new_cor_file.csv.
 '''
 def het_vinden_en_toevoegen(super_dict,header,kleine_header):
-    file1 = open("new_cor_file.csv","w")
+    file1 = open("new_cor_file_TRAINING.csv","w")
     file1.write(header+"\n")
 
-    regels_uit_uber =roep_locatie_file("uber_file_totlocatie.csv")
+    regels_uit_uber =roep_locatie_file("uber_file_totlocatieTRAINING.csv")
     for UB_regel in regels_uit_uber[1::]:
         UB_regel = UB_regel.rstrip("\n")
         for atribuut in kleine_header:
             try:
-                for interactie in super_dict[UB_regel.split(",")[0].strip("\"")]:
+                for interactie in super_dict[UB_regel.split(",")[0]]:#.strip("\"")]:
                     toelating = False
+                  #  print interactie[0], "\t", atribuut
                     if interactie[0] ==atribuut:
                         toelating = True
                         break
                 if toelating==True:
                     UB_regel += "," + interactie[1] + "," + interactie[2].rstrip("\r\n")
                 else:
+
                     UB_regel += ",False,0"
             except KeyError:
                 UB_regel+= ",False,0"
@@ -75,7 +77,7 @@ Zoals te zien is staat het ook 2 kanten.
 '''
 def maak_dictionary():
     dict_koppel = {}
-    file2 = open("Interactions_relation.data.txt", "r")
+    file2 = open("k-nn_Interactions_relation.csv", "r")
     lijst_file2 = file2.readlines()
     file2.close()
     for i in lijst_file2:
