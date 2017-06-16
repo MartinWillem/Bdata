@@ -1,0 +1,403 @@
+accuracy: 73.79% +/- 4.83% (mikro: 73.78%)
+classification_error: 26.21% +/- 4.83% (mikro: 26.22%)
+kappa: 0.651 +/- 0.063 (mikro: 0.651)
+
+	true cytoplasm.	true cytoskeleton.	true nucleus.	true plasma membrane.	true mitochondria.	true vacuole.	true ER.	true golgi.	true transport vesicles.	true peroxisome.	true integral membrane.	true endosome.	true extracellular.	true cell wall.	true lipid particles.	class precision
+pred. cytoplasm.	144	6	22	6	9	0	5	3	0	3	1	1	0	1	0	71.64%
+pred. cytoskeleton.	3	36	8	0	0	0	1	1	0	1	0	0	0	0	0	72.00%
+pred. nucleus.	16	9	326	4	4	0	3	0	0	1	0	1	0	0	0	89.56%
+pred. plasma membrane.	11	1	4	20	9	1	2	3	2	2	1	0	0	0	1	35.09%
+pred. mitochondria.	5	0	4	2	47	0	0	0	0	1	0	0	1	0	0	78.33%
+pred. vacuole.	1	0	0	0	0	14	2	1	0	0	1	0	1	0	0	70.00%
+pred. ER.	5	3	0	3	0	1	23	5	1	1	0	0	0	0	0	54.76%
+pred. golgi.	2	2	0	2	0	0	5	14	1	0	0	2	0	0	0	50.00%
+pred. transport vesicles.	0	1	3	2	0	0	1	5	12	1	0	0	0	0	0	48.00%
+pred. peroxisome.	3	0	0	3	0	0	0	1	1	0	0	0	0	0	0	0.00%
+pred. integral membrane.	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0.00%
+pred. endosome.	0	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0.00%
+pred. extracellular.	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.00%
+pred. cell wall.	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.00%
+pred. lipid particles.	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0.00%
+class recall	75.39%	62.07%	88.83%	46.51%	68.12%	77.78%	53.49%	40.00%	70.59%	0.00%	0.00%	0.00%	0.00%	0.00%	0.00%	
+
+G234062	?	mitochondria.
+G234081	?	nucleus.
+G234086	?	nucleus.
+G234087	?	nucleus.
+G234094	?	ER.
+G234097	?	plasma membrane.
+G234112	?	mitochondria.
+G234120	?	plasma membrane.
+G234125	?	ER.
+G234137	?	nucleus.
+G234140	?	golgi.
+G234147	?	nucleus.
+G234161	?	mitochondria.
+G234175	?	nucleus.
+G234179	?	cytoplasm.
+G234181	?	cytoplasm.
+G234189	?	cytoplasm.
+G234199	?	golgi.
+G234203	?	nucleus.
+G234213	?	plasma membrane.
+G234215	?	cytoplasm.
+G234216	?	cytoplasm.
+G234226	?	plasma membrane.
+G234231	?	ER.
+G234247	?	golgi.
+G234249	?	cytoplasm.
+G234256	?	cytoplasm.
+G234258	?	cytoplasm.
+G234267	?	cytoplasm.
+G234268	?	cytoplasm.
+G234273	?	cytoplasm.
+G234283	?	cytoplasm.
+G234289	?	nucleus.
+G234298	?	golgi.
+G234299	?	cytoplasm.
+G234314	?	nucleus.
+G234333	?	golgi.
+G234339	?	mitochondria.
+G234364	?	plasma membrane.
+G234365	?	mitochondria.
+G234372	?	nucleus.
+G234373	?	nucleus.
+G234385	?	ER.
+G234389	?	nucleus.
+G234394	?	cytoskeleton.
+G234405	?	nucleus.
+G234411	?	nucleus.
+G234412	?	vacuole.
+G234414	?	vacuole.
+G234419	?	ER.
+G234423	?	cytoplasm.
+G234433	?	nucleus.
+G234442	?	nucleus.
+G234470	?	plasma membrane.
+G234485	?	nucleus.
+G234490	?	golgi.
+G234511	?	nucleus.
+G234515	?	ER.
+G234521	?	plasma membrane.
+G234531	?	golgi.
+G234534	?	mitochondria.
+G234565	?	ER.
+G234570	?	cytoplasm.
+G234573	?	ER.
+G234579	?	plasma membrane.
+G234590	?	nucleus.
+G234592	?	cytoplasm.
+G234612	?	nucleus.
+G234615	?	plasma membrane.
+G234617	?	plasma membrane.
+G234618	?	nucleus.
+G234633	?	nucleus.
+G234641	?	cytoskeleton.
+G234645	?	cytoplasm.
+G234651	?	transport vesicles.
+G234653	?	nucleus.
+G234671	?	cytoplasm.
+G234679	?	cytoplasm.
+G234683	?	ER.
+G234688	?	nucleus.
+G234698	?	plasma membrane.
+G234701	?	cytoplasm.
+G234704	?	nucleus.
+G234711	?	cytoplasm.
+G234728	?	mitochondria.
+G234739	?	cytoplasm.
+G234741	?	ER.
+G234742	?	golgi.
+G234743	?	cytoplasm.
+G234750	?	ER.
+G234758	?	ER.
+G234773	?	nucleus.
+G234780	?	nucleus.
+G234785	?	cytoskeleton.
+G234790	?	nucleus.
+G234791	?	mitochondria.
+G234794	?	nucleus.
+G234798	?	nucleus.
+G234802	?	cytoplasm.
+G234806	?	cytoskeleton.
+G234813	?	nucleus.
+G234834	?	mitochondria.
+G234837	?	nucleus.
+G234847	?	cytoplasm.
+G234861	?	nucleus.
+G234881	?	nucleus.
+G234905	?	cytoplasm.
+G234922	?	nucleus.
+G234927	?	nucleus.
+G234940	?	plasma membrane.
+G234945	?	nucleus.
+G234951	?	nucleus.
+G234958	?	nucleus.
+G234965	?	nucleus.
+G234971	?	ER.
+G234974	?	nucleus.
+G234977	?	plasma membrane.
+G234992	?	plasma membrane.
+G235001	?	nucleus.
+G235033	?	nucleus.
+G235050	?	nucleus.
+G235051	?	golgi.
+G235055	?	mitochondria.
+G235069	?	nucleus.
+G235081	?	plasma membrane.
+G235082	?	nucleus.
+G235094	?	mitochondria.
+G235096	?	nucleus.
+G235097	?	ER.
+G235098	?	cytoplasm.
+G235104	?	ER.
+G235106	?	nucleus.
+G235108	?	nucleus.
+G235109	?	nucleus.
+G235110	?	nucleus.
+G235111	?	plasma membrane.
+G235112	?	cytoskeleton.
+G235118	?	transport vesicles.
+G235121	?	nucleus.
+G235149	?	nucleus.
+G235150	?	plasma membrane.
+G235160	?	nucleus.
+G235166	?	nucleus.
+G235176	?	cytoplasm.
+G235179	?	nucleus.
+G235183	?	cytoskeleton.
+G235186	?	nucleus.
+G235208	?	cytoplasm.
+G235215	?	nucleus.
+G235220	?	transport vesicles.
+G235223	?	cytoskeleton.
+G235224	?	cytoplasm.
+G235232	?	cytoplasm.
+G235233	?	nucleus.
+G235236	?	cytoskeleton.
+G235237	?	nucleus.
+G235255	?	nucleus.
+G235256	?	cytoskeleton.
+G235268	?	golgi.
+G235275	?	mitochondria.
+G235276	?	cytoplasm.
+G235284	?	cytoplasm.
+G235291	?	cytoskeleton.
+G235299	?	mitochondria.
+G235305	?	plasma membrane.
+G235311	?	nucleus.
+G235315	?	cytoplasm.
+G235318	?	peroxisome.
+G235319	?	nucleus.
+G235325	?	plasma membrane.
+G235328	?	ER.
+G235337	?	nucleus.
+G235339	?	cytoskeleton.
+G235352	?	nucleus.
+G235353	?	transport vesicles.
+G235354	?	nucleus.
+G235356	?	ER.
+G235362	?	nucleus.
+G235367	?	nucleus.
+G235369	?	plasma membrane.
+G235376	?	nucleus.
+G235377	?	ER.
+G235385	?	cytoplasm.
+G235387	?	golgi.
+G235389	?	cytoplasm.
+G235392	?	cytoplasm.
+G235393	?	nucleus.
+G235402	?	cytoskeleton.
+G235405	?	endosome.
+G235414	?	cytoplasm.
+G235423	?	cytoplasm.
+G235424	?	golgi.
+G235440	?	cytoplasm.
+G235446	?	golgi.
+G235454	?	mitochondria.
+G235466	?	cytoplasm.
+G235476	?	nucleus.
+G235487	?	nucleus.
+G235488	?	golgi.
+G235493	?	cytoplasm.
+G235503	?	cytoskeleton.
+G235505	?	nucleus.
+G235507	?	cytoskeleton.
+G235511	?	ER.
+G235517	?	cytoskeleton.
+G235520	?	nucleus.
+G235524	?	cytoplasm.
+G235533	?	nucleus.
+G235537	?	cytoplasm.
+G235538	?	cytoplasm.
+G235541	?	ER.
+G235547	?	cytoskeleton.
+G235562	?	nucleus.
+G235565	?	cytoskeleton.
+G235567	?	cytoplasm.
+G235569	?	ER.
+G235571	?	cytoplasm.
+G235576	?	ER.
+G235587	?	ER.
+G235589	?	cytoplasm.
+G235595	?	cytoplasm.
+G235596	?	cytoplasm.
+G235602	?	plasma membrane.
+G235605	?	cytoskeleton.
+G235612	?	cytoplasm.
+G235635	?	nucleus.
+G235638	?	transport vesicles.
+G235646	?	cytoskeleton.
+G235668	?	cytoplasm.
+G235673	?	nucleus.
+G235679	?	nucleus.
+G235685	?	golgi.
+G235695	?	cytoplasm.
+G235704	?	ER.
+G235705	?	cytoplasm.
+G235709	?	nucleus.
+G235719	?	vacuole.
+G235746	?	nucleus.
+G235748	?	cytoplasm.
+G235752	?	cytoplasm.
+G235761	?	golgi.
+G235767	?	mitochondria.
+G235770	?	cytoplasm.
+G235775	?	nucleus.
+G235777	?	nucleus.
+G235778	?	cytoplasm.
+G235783	?	cytoplasm.
+G235794	?	ER.
+G235795	?	cytoplasm.
+G235804	?	cytoplasm.
+G235818	?	cytoplasm.
+G235831	?	ER.
+G235848	?	nucleus.
+G235855	?	plasma membrane.
+G235857	?	cytoplasm.
+G235860	?	nucleus.
+G235875	?	nucleus.
+G235878	?	plasma membrane.
+G235882	?	plasma membrane.
+G235888	?	cytoplasm.
+G235893	?	cytoplasm.
+G235898	?	cytoplasm.
+G235900	?	vacuole.
+G235901	?	cytoskeleton.
+G235904	?	cytoplasm.
+G235908	?	vacuole.
+G235909	?	nucleus.
+G235916	?	nucleus.
+G235917	?	cytoplasm.
+G235928	?	nucleus.
+G235931	?	cytoplasm.
+G235933	?	cytoplasm.
+G236021	?	golgi.
+G236066	?	golgi.
+G236099	?	cytoskeleton.
+G236279	?	plasma membrane.
+G236380	?	golgi.
+G236523	?	ER.
+G236606	?	plasma membrane.
+G236661	?	cytoplasm.
+G236736	?	cytoplasm.
+G236758	?	cytoplasm.
+G236771	?	golgi.
+G236812	?	ER.
+G236813	?	nucleus.
+G236831	?	cytoplasm.
+G236838	?	ER.
+G236919	?	nucleus.
+G236955	?	ER.
+G236985	?	nucleus.
+G237026	?	cytoplasm.
+G237043	?	plasma membrane.
+G237059	?	ER.
+G237100	?	ER.
+G237116	?	golgi.
+G237124	?	endosome.
+G237126	?	plasma membrane.
+G237153	?	cytoplasm.
+G237154	?	ER.
+G237196	?	plasma membrane.
+G237321	?	ER.
+G237337	?	cytoplasm.
+G237358	?	cytoplasm.
+G237375	?	golgi.
+G237387	?	mitochondria.
+G237392	?	golgi.
+G237406	?	cytoplasm.
+G237429	?	vacuole.
+G237436	?	cytoplasm.
+G237529	?	nucleus.
+G237587	?	mitochondria.
+G237656	?	plasma membrane.
+G237670	?	nucleus.
+G237700	?	plasma membrane.
+G237728	?	golgi.
+G237747	?	golgi.
+G237986	?	cytoplasm.
+G238048	?	mitochondria.
+G238063	?	nucleus.
+G238132	?	plasma membrane.
+G238147	?	ER.
+G238170	?	plasma membrane.
+G238375	?	cytoplasm.
+G238400	?	cytoskeleton.
+G238429	?	plasma membrane.
+G238447	?	cytoplasm.
+G238584	?	golgi.
+G238609	?	cytoplasm.
+G238615	?	golgi.
+G238662	?	vacuole.
+G238723	?	ER.
+G238783	?	golgi.
+G238800	?	ER.
+G238809	?	vacuole.
+G238856	?	ER.
+G238898	?	plasma membrane.
+G238905	?	plasma membrane.
+G238920	?	golgi.
+G239060	?	plasma membrane.
+G239162	?	golgi.
+G239167	?	cytoplasm.
+G239273	?	golgi.
+G239304	?	plasma membrane.
+G239343	?	plasma membrane.
+G239364	?	plasma membrane.
+G239399	?	ER.
+G239517	?	plasma membrane.
+G239520	?	nucleus.
+G239572	?	cytoplasm.
+G239574	?	ER.
+G239588	?	cytoplasm.
+G239593	?	cytoplasm.
+G239664	?	cytoplasm.
+G239681	?	cytoplasm.
+G239825	?	cytoplasm.
+G239830	?	ER.
+G239835	?	cytoplasm.
+G239847	?	ER.
+G239856	?	nucleus.
+G239911	?	golgi.
+G239913	?	nucleus.
+G239922	?	plasma membrane.
+G239938	?	nucleus.
+G239971	?	golgi.
+G239974	?	nucleus.
+G240040	?	ER.
+G240057	?	mitochondria.
+G240072	?	ER.
+G240185	?	nucleus.
+G240200	?	mitochondria.
+G240227	?	nucleus.
+G240237	?	cytoplasm.
+G240291	?	cytoskeleton.
+G240296	?	mitochondria.
+G240327	?	nucleus.
+G240373	?	ER.
+G240380	?	cytoplasm.
+G240407	?	ER.
+G240440	?	cytoplasm.
+G240462	?	cytoplasm.
+G240492	?	plasma membrane.
